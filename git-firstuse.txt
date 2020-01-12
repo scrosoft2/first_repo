@@ -1,0 +1,265 @@
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git
+$ git init
+Initialized empty Git repository in C:/Users/muhammad arjumand/Desktop/git/.git/
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        stack.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git add .
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   stack.cpp
+
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git commit -m "version 1"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'muhammad arjumand@DESKTOP-RS1NGVR.(none)')
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ^C
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$   git config --global user.email "scrosoft2@gmail.com"
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git config --global user.name "Your Name"
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git config --global user.name "muhammadarjumand"
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git commit -m "version 1"
+[master (root-commit) 1d93150] version 1
+ 1 file changed, 105 insertions(+)
+ create mode 100644 stack.cpp
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git log
+commit 1d93150b72786c3b1422499b286b8c2ee4318032 (HEAD -> master)
+Author: muhammadarjumand <scrosoft2@gmail.com>
+Date:   Sun Jan 12 09:27:16 2020 +0500
+
+    version 1
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ssh-keygen -t rsa -b 4096 -C "scrosoft2@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/muhammad arjumand/.ssh/id_rsa):
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git remote add origin git@github.com:scrosoft2/first_repo.git
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? no
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$   git config --global user.email
+scrosoft2@gmail.com
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ssh-keygen -t rsa -b 4096 -C "scrosoft2@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/muhammad arjumand/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/muhammad arjumand/.ssh/id_rsa.
+Your public key has been saved in /c/Users/muhammad arjumand/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:JfWCbtvtzFT8zegajzbSG9tUJO/x+U608NGqyboyD3A scrosoft2@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|          .      |
+|         o .     |
+|        o o . . .|
+|       . o . . +.|
+|      . E    .oo=|
+|       + o . .oOB|
+|        o ..= ++B|
+|        o..*+% ..|
+|         ++=%++.o|
++----[SHA256]-----+
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ eval $(ssh-agent -s)
+Agent pid 2139
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/muhammad arjumand/.ssh/id_rsa (scrosoft2@gmail.com)
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+bash: clip: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ echo $path
+
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ $ clip < ~/.ssh/id_rsa.pub
+bash: $: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ $ clip < ~/.ssh/id_rsa.pub
+bash: $: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+bash: clip: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ eval $(ssh-agent -s)
+Agent pid 2167
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/muhammad arjumand/.ssh/id_rsa (scrosoft2@gmail.com)
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+bash: clip: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdH1Z70FwtxJ8sNP/qpJtNGPwrqrHGmfAs7FqPx2HRsOBvSb1JaZ5aabzwTFtLe9ycPBZIPe8tJ8ab/K2xuNZ+tzqnBm/+M48MHRyzQvQPGQf1npI1BCXAFfRSz8X+a3KWRYBW2i8saXojoemnHsA2zji/GHhVm6BqBXuAF+94gJbdZspQTEF78e+SieNynViSMIcWzpAppXm9ef0NOcMKA2FCToOmtsjOiywaJFe31yGdTDKUR190DwN4O/Aw58lo8EUZIL030txs9rtlS8QJq7j4Vxhr8kYRFTeAtHvMfrv483z+RF5D7JFC0AAt4jzTiab62LMlUvWoqV+eXD58l6bGMHx8Z50r+Afg8K7uSgyyLsmG7lYg1ZH2uLBoIScZvnGq+s1ZvSXvipoG17UJ3rClnWl52+NAT+hSb4GXzvm0m2Ph/7c6SgO0QN2TJyR8Y1fRx7OU4/AbOTokQbmV7NyhThUpUUZlaePphAtUFxce44pxN2KyWVzZd4dvZgRW+Q1mc4ZFPbEIfrsYkf6A0XaAu6xt9XDeVGme3ZUhyh7+L5QTDcIxcNImUzxjqPLONBNBqZ4YnPyKLTklyGkqZI88vi/6yP50wSWhqYYHTYQG04/xHlQab0nM5WtNHugQKbQXZEcJXZBngAb+RYNOO3ZSxLtIk/j9LZeYlgd1VQ== scrosoft2@gmail.com
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ eval $(ssh-agent -s)
+Agent pid 2196
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/muhammad arjumand/.ssh/id_rsa (scrosoft2@gmail.com)
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ clip < ~/.ssh/id_rsa.pub
+bash: clip: command not found
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDdH1Z70FwtxJ8sNP/qpJtNGPwrqrHGmfAs7FqPx2HRsOBvSb1JaZ5aabzwTFtLe9ycPBZIPe8tJ8ab/K2xuNZ+tzqnBm/+M48MHRyzQvQPGQf1npI1BCXAFfRSz8X+a3KWRYBW2i8saXojoemnHsA2zji/GHhVm6BqBXuAF+94gJbdZspQTEF78e+SieNynViSMIcWzpAppXm9ef0NOcMKA2FCToOmtsjOiywaJFe31yGdTDKUR190DwN4O/Aw58lo8EUZIL030txs9rtlS8QJq7j4Vxhr8kYRFTeAtHvMfrv483z+RF5D7JFC0AAt4jzTiab62LMlUvWoqV+eXD58l6bGMHx8Z50r+Afg8K7uSgyyLsmG7lYg1ZH2uLBoIScZvnGq+s1ZvSXvipoG17UJ3rClnWl52+NAT+hSb4GXzvm0m2Ph/7c6SgO0QN2TJyR8Y1fRx7OU4/AbOTokQbmV7NyhThUpUUZlaePphAtUFxce44pxN2KyWVzZd4dvZgRW+Q1mc4ZFPbEIfrsYkf6A0XaAu6xt9XDeVGme3ZUhyh7+L5QTDcIxcNImUzxjqPLONBNBqZ4YnPyKLTklyGkqZI88vi/6yP50wSWhqYYHTYQG04/xHlQab0nM5WtNHugQKbQXZEcJXZBngAb+RYNOO3ZSxLtIk/j9LZeYlgd1VQ== scrosoft2@gmail.com
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+The authenticity of host 'github.com (192.30.253.113)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 774 bytes | 774.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:scrosoft2/first_repo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   stack.cpp
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git add .
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   stack.cpp
+
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git commit -m "version 2"
+[master a50f22c] version 2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$ git push -u origin master
+Warning: Permanently added the RSA host key for IP address '140.82.113.4' to the list of known hosts.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:scrosoft2/first_repo.git
+   1d93150..a50f22c  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+muhammad arjumand@DESKTOP-RS1NGVR MINGW64 ~/Desktop/git (master)
+$
