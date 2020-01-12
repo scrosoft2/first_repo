@@ -12,7 +12,7 @@ class stack{
 		
 	public:
 		stack(){
-			top = -1;
+			top = -2;
 		}	
 		
 	void push(){
